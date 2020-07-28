@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>Home</title>
+<link rel="stylesheet" type="text/css" href="home.css">
+<link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Alex Brush'>
+<style>
+    #title{
+        font-family: 'Alex Brush';
+        font-size: 80px;
+        font-weight: bold;
+    }
+</style>
+<script type = "text/javascript">
+    function displayNextImage() {
+        x = (x === images.length - 1) ? 0 : x + 1;
+        document.getElementById("img").src = images[x];
+    }
+
+    function displayPreviousImage() {
+        x = (x <= 0) ? images.length - 1 : x - 1;
+        document.getElementById("img").src = images[x];
+    }
+
+    function startTimer() {
+        setInterval(displayNextImage, 3000);
+    }
+
+    var images = [], x = -1;
+    images[0] = "cafe.jpg";
+    images[1] = "cafe3.jpg";
+    images[2] = "cupofcoffee1.jpg";
+</script>
+</head>
+<body onload = "startTimer()">
+    <p id="title">Coffee &Cake</p>
+    <img id="img" src="cafe.jpg">
+    <ul>
+        <li id="order">
+            <img  class="liimg" src="coffee-21.gif">
+            <button class="ordernow" onclick="window.location.href ='menu.html'">Order Now</p>
+        </li>
+        <li id="custom">
+            <img  class="liimg" src="cake-making.gif">
+            <button class="ordernow" onclick="window.location.href ='customcake.html'">Customize Your Cake</p>
+        </li>
+        <li id="book">
+            <img  class="liimg" src="coffee-34.gif">
+            <button class="ordernow" onclick="window.location.href ='bookyourseats.html'">Book Your Table</p>
+        </li>
+    </ul>
+    
+
+</body>
+
+</html>

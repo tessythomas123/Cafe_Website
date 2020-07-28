@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Customize Your Cakes!!</title>
+        <link rel="stylesheet" type="text/css" href="customcake.css">
+        <link rel="stylesheet"  href='https://fonts.googleapis.com/css?family=Alex Brush'>
+        <style>
+            #title{
+                font-family: 'Alex Brush';
+                font-size: 80px;
+                font-weight: bold;
+                color: blanchedalmond;
+                text-align:center;   
+            }
+            label{
+                font-family: 'Alex Brush';
+            }
+        </style>
+        <script>
+            function Order(){
+                alert("Your order is received and we will call you for further details")
+            }
+        </script>
+    </head>
+    
+    <body>
+        <a href="home.html"><img src="home_button.jpg" id="homeb"></a>
+        <h1 id="title">Customize Your Cakes Here!! </h1><br><br>
+        
+        <diV class="out">
+            <img src="cake-making.gif">
+            <form>
+                <label for="desc">Description:</label><br><br>
+                <textarea id="desc" class="text" placeholder="Tell us about your dream cake!!" ></textarea><br><br>
+                <label for="cimg">Enter Images of cakes in same genre:</label>
+                <input type="file" id="cimg" multiple class="text"><br><br>
+                <label for="pno" >Enter your Phone number:</label>
+                <input type="number" id="pno" class="text" placeholder="Enter your phone number here.We will call you back in 10 minutes"><br><br>
+
+                <label for="flavour">Flavour:</label><br>
+                <input list="flavours" id="flavour" class="text">
+                <datalist id="flavours">
+                    <option value="Chocolate">Chocolate</option>
+                    <option value="Strawberry">Strawberry</option>
+                    <option value="Vanila">Vanila</option>
+                </datalist><br><br>
+                <label for="qty">Quantity:</label><br>
+                <select name="qty" id="qty" class="text">
+                    <option value="1Kg">1Kg</option>
+                    <option value="500g">500g</option>
+                    <option value="2Kg">2Kg</option>
+                </select><br><br>
+                <label for="dt">Date:</label><br>
+                <input type="date" id="dt" class="text"><br><br>
+                <input type="submit" id="btn" value="Order Now!!" onclick="Order()">
+            </form>
+        </diV>
+        
+    </body>
+</html>

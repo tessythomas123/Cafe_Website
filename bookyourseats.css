@@ -1,0 +1,54 @@
+
+body{
+    background-color:rgb(93, 63, 34);
+    margin: 0;
+    padding: 0;
+}
+#title{
+    overflow: hidden;
+    margin:0 ;
+    padding:0; 
+    background-color: rgb(66, 46, 28);
+    font-size: 80px;
+    font-weight: bold;
+    color: blanchedalmond;
+    text-align:center;               
+    
+}
+label{
+    color: blanchedalmond;
+    font-size: 40px;
+   font-weight: bold;
+   margin-top:8em;
+    padding:0;
+    margin-left: 300px;
+
+}
+#btype{
+    margin-top:8em;
+}
+#nft{
+    margin-top: 10px;
+    margin-left: 90px;
+}
+.text{
+    width:35%;
+    background-color: rgb(252, 237, 215);
+    height: 30px;
+}
+
+.btn{
+    margin-left: 650px;
+    width: 100px;
+    height: 50px;
+    background-color:rgb(43, 26, 12);
+    color: white;
+}
+#homeb{
+    margin-left:1250px;
+    height: 75px;
+    width: 75px;
+    margin-top: 10px;
+    float: right;
+    position: absolute;
+}

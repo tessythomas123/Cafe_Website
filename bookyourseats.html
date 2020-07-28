@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Book Your Seats in Advance</title>
+        <link rel="stylesheet" href="bookyourseats.css">
+        <link rel="stylesheet"  href='https://fonts.googleapis.com/css?family=Alex Brush'>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>  
+$(document).ready(function(){
+    $(".Otype").hide();
+
+});
+function showElement(ele){
+    if(ele.value=="other"){
+        $(".Otype").show();
+        $("#entsub").hide();
+    }
+        
+    else{
+        $(".Otype").hide(); 
+        $("#entsub").show(); 
+    }
+   
+
+}
+function calCost(num){
+    var cost=parseInt(num.value);
+    if(cost<=25 && cost>=1){
+        cost*=50;
+    alert("Your booking costs "+cost+" rupees");
+    }
+    else{
+        if(cost<1){
+        alert("Book atleast one table")        }
+        else{
+            alert("There are only 25 tables available")
+        }
+
+    }
+        
+}
+
+function calCost2(){
+    alert("Your booking costs 1000 rupees");
+}
+
+
+</script>
+<style>
+    #title{
+        font-family: 'Alex Brush';
+    }
+    label{
+        font-family: 'Alex Brush';
+    }
+</style>
+    </head>
+    <body>
+        <a href="home.html"><img src="home_button.jpg" id="homeb"></a>
+        <h1 id="title">Book Your Place in Advance</h1>
+        <forms>
+            <label for="btype">Booking Type:</label>
+            <select id="btype" name="bytpe" onchange="showElement(this)" class="text">
+                <option value="ENTCafe" selected>Entire cafe</option>
+                <option value="other">Tables</option>
+            </select><br><br>
+            <div class="Otype"  >
+                <label for="nft">Tables:</label>
+                <input type="number" id="nft" class="text" placeholder="no.of tables"onchange="calCost(this)" max="25" min="1"><br><br>
+                <input  type="submit" value="Book now" class="btn">
+            </div>
+           <input type="submit"  id="entsub" class="btn" value="Booknow" onclick="calCost2()">
+           
+        </forms>
+
+    </body>
+</html>
